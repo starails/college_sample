@@ -13,15 +13,12 @@ public class MockGUITestFromDatabase {
 		ExpensesController.getInstance().setPersistenceMode(PersistenceType.DATABASE);
 		ExpensesController.getInstance().load();
 		
-		//Display all expenses
+		//This will display all of the current expenses
 		ArrayList<Expense> expenseList = ExpensesController.getInstance().getListOfExpenses();
 		
 		for (Expense e: expenseList)
 		{
 			System.out.println(e.getName() + "\t Cost: €" + e.getAmount());
 		}
-		
-		
-		
 	}
 }
